@@ -1,0 +1,21 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+			"version": "latest",
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		}
+	},
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ritwickdey.liveserver"
+			]
+		}
+	},
+
+	"postCreateCommand": "sudo chown -R vscode:vscode /workspaces"
+}
